@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aplikacja To-Do</title>
+
+  <link rel="stylesheet" href="bootstrap.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+  <!--dodaję ikonki ,,zrobione" i krzyżyk-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!--dodaję czcionki z fonts.google.com-->
+  <link href="https://fonts.googleapis.com/css?family=Glegoo:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+  <main class="application-container"><!--pojemnik na wszystko-->
+    <h3 class="text-center">Lista zadań</h3>
+
+    <section class="add-new-task-container"><!--pojemnik na nowe zadania-->
+      <form>
+        <!--wziąłem z bootstrapa : http.getbootstrap.com/docs/4.0/components/input-group/ nagłówek Button addons-->
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Nazwa zadania..." aria-label="Nazwa zadania...">
+
+        <!--używam span po input'e, aby z prawej strony pojawił się przycisk-->
+          <span class="input-group-btn">
+            <button class="btn btn-primary" type="submit">Dodaj zadanie</button><!--zamiast submit może być text, ale gorzej wygląda, submit chyba umożliwia przesłanie formularza po wciśnięciu entera-->
+           </span>
+        </div>
+        <!--koniec bootstrapa-->
+      </form>
+    </section>
+
+    <section class="tasks-container"><!--pojemnik na już dodane zadania-->
+      <ul>
+
+      </ul>
+    </section><!--class="tasks-container"-->
+
+  </main>
+
+  <script src="app.js"></script><!--rozpoczęcie działania całej aplikacji-->
+  <script src="modules/new-task.js"></script><!--lista wszystkich zadań-->
+  <script src="modules/tasks-list.js"></script><!--dodawanie zadania-->
+  <script src="modules/tasks.js"></script><!--wyświetlanie listy zadań-->
+  <!--wykorzystuję LiveReload-->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
